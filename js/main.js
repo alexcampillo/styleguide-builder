@@ -1,13 +1,16 @@
 // Add your js here
 $(document).ready(function() {
   
-  var increase_font_size = $('.font-size .btn-plus')
-  var decrease_font_size = $('.font-size .btn-minus')
+  var increase_font_size = $('.p-font-size .btn-plus')
+  var decrease_font_size = $('.p-font-size .btn-minus')
 
-  var increase_line_height = $('.line-height .btn-plus')
-  var decrease_line_height = $('.line-height .btn-minus')
+  var increase_line_height = $('.p-line-height .btn-plus')
+  var decrease_line_height = $('.p-line-height .btn-minus')
 
-  var random_color = $('.color .btn-random')
+  var increase_letter_spacing = $('.p-letter-spacing .btn-plus')
+  var decrease_letter_spacing = $('.p-letter-spacing .btn-minus')
+
+  var random_color = $('.p-color .btn-random')
 
   var target = $(".targeted");
 
@@ -47,6 +50,25 @@ $(document).ready(function() {
     target.css('line-height', lh_counter + 'px');
     $('.lh-label').text(lh_counter + 'px');
   });
+
+// INCREASE / DECREASE LETTER SPACING
+
+  var ls_counter = 0;
+
+  increase_letter_spacing.click(function(e) {
+    e.preventDefault();
+    ls_counter += 2;
+    target.css('letter-spacing', ls_counter + 'px');
+    $('.ls-label').text(ls_counter + 'px');
+  });
+
+  decrease_letter_spacing.click(function(e) {
+    e.preventDefault();
+    ls_counter -= 2;
+    target.css('letter-spacing', ls_counter + 'px');
+    $('.ls-label').text(ls_counter + 'px');
+  });
+
   //Random Colors Function
   function hex() {
     random_number = Math.random() * 100
@@ -79,6 +101,7 @@ $(document).ready(function() {
   //Add Labels
   $('.fs-label').text(fs_counter + "px");
   $('.lh-label').text(lh_counter + 'px');
+  $('.ls-label').text(ls_counter + 'px');
   $('.color-label').text(hex_color);
 
 });
