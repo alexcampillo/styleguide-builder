@@ -25,6 +25,9 @@ $(document).ready(function() {
   //     color('h');
   //   }
   // });
+var get_counter = function(x){
+  $(x).css('font-size').toString().slice(0, -2);
+}
 
 $('a.paragraph').click(function(e){
     font_size('p', 16);
@@ -46,6 +49,8 @@ $('a.heading').click(function(e){
     letter_spacing('h', 0);
     color('h');
 });
+
+
 
 
 

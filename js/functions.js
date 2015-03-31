@@ -4,8 +4,12 @@
 	var fs_counter, lh_counter, ls_counter, hex_color, target, increase_font_size, decrease_font_size, increase_line_height, decrease_line_height, increase_letter_spacing, decrease_letter_spacing, random_color;
 
 	//	TARGETING TEXT ELEMENTS
-	var text_element = function(x) {
+	var element_target = function(x) {
 		target = $('.' + x + '-targeted')
+	}
+
+	// CREATING ELEMENT SELECTIONS
+	var text_element = function(x) {
 
 		increase_font_size = $('.' + x + '-font-size .btn-plus')
 		decrease_font_size = $('.' + x + '-font-size .btn-minus')
@@ -18,7 +22,7 @@
 
 		random_color = $('.' + x + '-color .btn-random')
 
-		return increase_font_size, decrease_font_size, increase_line_height, decrease_line_height, increase_letter_spacing, decrease_letter_spacing, random_color
+		return increase_font_size, decrease_font_size, increase_line_height, decrease_line_height, increase_letter_spacing, decrease_letter_spacing, random_color;
 	}
 
   // INCREASE / DECREASE FONT SIZE
@@ -27,21 +31,24 @@
   text_element(element);
     
   fs_counter = counter;
+  
+  function increase_decrease_toggle() {
 
-  increase_font_size.click(function(e) {
-    e.preventDefault();
-    fs_counter += 2;
-    target.css('font-size', fs_counter + 'px');
-    $('.fs-label').text(fs_counter + "px");
-  });
+	  increase_font_size.click(function(e) {
+	    e.preventDefault();
+	    fs_counter += 2;
+	    target.css('font-size', fs_counter + 'px');
+	    $('.fs-label').text(fs_counter + "px");
+	  });
 
-  decrease_font_size.click(function(e) {
-    e.preventDefault();
-    fs_counter -= 2;
-    target.css('font-size', fs_counter + 'px');
-    $('.fs-label').text(fs_counter + "px");
-  });
-
+	  decrease_font_size.click(function(e) {
+	    e.preventDefault();
+	    fs_counter -= 2;
+	    target.css('font-size', fs_counter + 'px');
+	    $('.fs-label').text(fs_counter + "px");
+	  });
+	  
+	}
   }
 
   // INCREASE / DECREASE LINE HEIGHT
@@ -80,30 +87,22 @@ function letter_spacing(element, counter) {
     e.preventDefault();
     ls_counter += 2;
     target.css('letter-spacing', ls_counter + 'px');
-    $('.ls-label').text(ls_counter + 'px');
+
+    return ls_counter
   });
 
   decrease_letter_spacing.click(function(e) {
     e.preventDefault();
     ls_counter -= 2;
     target.css('letter-spacing', ls_counter + 'px');
-    $('.ls-label').text(ls_counter + 'px');
+
+    return ls_counter
   });
+
+  $('.ls-label').text(ls_counter + 'px');
+  return ls_counter
 }
 
-//Random Colors Function
-  function hex() {
-    random_number = Math.random() * 100
-    if(random_number < 51) {
-      return 
-    }
-
-    color_num = Math.round(Math.random() * 100)
-    
-    for(var i = 0; i < 7; i++) {
-
-    }
-  }
 
 // RANDOM HEX COLOR
 function color(element) {
