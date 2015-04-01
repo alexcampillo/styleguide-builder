@@ -22,10 +22,17 @@
 	// }
 
 	function font_size_label(x) {
-		var fs_label = $('.' + x + '-fs-label')
-		console.log(fs_label)
-		return fs_label
+		var fs_label = $('.' + x + '-fs-label');
+		return fs_label;
 	}
+
+	var paragraph_font_size_label = font_size_label('p');
+	var heading_font_size_label = font_size_label('h');
+	var subheading_font_size_label = font_size_label('sh');
+
+	console.log (paragraph_font_size_label);
+	console.log(heading_font_size_label);
+	console.log(subheading_font_size_label);
 
     function toggle_font_size(x, counter) {
 
@@ -60,8 +67,6 @@
   	}
 
   	// PARAGRAPH FONT SIZE
-
-    console.log(paragraph_font_size_counter)
 
   	function change_paragraph_font_size() {
   		
