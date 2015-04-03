@@ -46,14 +46,14 @@ var p_font_size_counter, h_font_size_counter, sh_font_size_counter, p_font_size_
     	var fs_label = $('.' + x + '-fs-label')
 
     	var fsl = font_size_label(x);
-    	// var fs_counter;
+    	var fs_counter;
 
     	if(x == 'p') {
-    		return var fs_counter = p_font_size_counter
+    		fs_counter = p_font_size_counter
     	} else if(x == 'h') {
-    		return var fs_counter = h_font_size_counter
+    		fs_counter = h_font_size_counter
     	} else if(x == 'sh'){
-    		return var fs_counter = sh_font_size_counter
+    		fs_counter = sh_font_size_counter
     	}
 
     	console.log("font size is " + fs_counter)
@@ -95,9 +95,22 @@ var p_font_size_counter, h_font_size_counter, sh_font_size_counter, p_font_size_
   		font_size('sh');
   	}
 
-  	change_paragraph_font_size();
-  	change_subheading_font_size();
-  	change_heading_font_size();
+$('.paragraph').click(function(){
+	change_paragraph_font_size();
+});
+
+$('.heading').click(function(){
+	change_heading_font_size();
+});
+
+$('.subheading').click(function(){
+	change_subheading_font_size();
+});
+
+
+  	
+  	// change_subheading_font_size();
+  	// change_heading_font_size();
 
 
 
