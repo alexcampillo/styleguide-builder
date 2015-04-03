@@ -108,11 +108,6 @@ $('.subheading').click(function(){
 });
 
 
-  	
-  	// change_subheading_font_size();
-  	// change_heading_font_size();
-
-
 
 
 

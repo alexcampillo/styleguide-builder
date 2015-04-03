@@ -10,6 +10,12 @@
 
     <title>Basic Template for Bootstrap</title>
 
+    <!-- AngularJS Core -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+
+    <!-- AngularJS UI Router -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
+
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -23,7 +29,7 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body ng-app="typeShare">
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -184,71 +190,16 @@
   </div>
 </div>
 
+<section class="container" ng-controller="FontCtrl">
+  <section class="row col-md-12">
+    <div ng-repeat="font in getFonts.items">
+      <p>{{font.family}}</p>
+    </div>
+  </section>
 </section>
 
-       <!--  <div class="container"> -->
-      <!-- Example row of columns -->
-<!--       <div class="row">
-        <div class="col-md-12">
-          <h2>Main Heading Styles:</h2>
-        </div>
-        <div class="col-md-4 p-font-size">
-          <h3>Font Size</h3>
-          <p>
-              <a class="btn btn-default btn-plus" href="#" role="button">+</a> 
-              <a class="btn btn-default btn-minus" href="#" role="button">-</a>
-          </p>
-          <h4 class="fs-label"></h4>
-        </div>
-        <div class="col-md-4 p-line-height">
-          <h3>Line Height</h3>
-          <p>
-              <a class="btn btn-default btn-plus" href="#" role="button">+</a> 
-              <a class="btn btn-default btn-minus" href="#" role="button">-</a>
-          </p>
-          <h4 class="lh-label"></h4>
-       </div>
-        <div class="col-md-4 p-color">
-          <h3>Color</h3>
-          <p>
-              <a class="btn btn-default btn-random" href="#" role="button">Random Color</a> 
-          </p>
-          <h4 class="color-label"></h4>
-        </div>
-      </div>
-    </div> -->
+</section>
 
-    <!-- <div class="container"> -->
-      <!-- Example row of columns -->
-      <!-- <div class="row">
-        <div class="col-md-12">
-          <h2>Subheading Styles:</h2>
-        </div>
-        <div class="col-md-4 p-font-size">
-          <h3>Font Size</h3>
-          <p>
-              <a class="btn btn-default btn-plus" href="#" role="button">+</a> 
-              <a class="btn btn-default btn-minus" href="#" role="button">-</a>
-          </p>
-          <h4 class="fs-label"></h4>
-        </div>
-        <div class="col-md-4 p-line-height">
-          <h3>Line Height</h3>
-          <p>
-              <a class="btn btn-default btn-plus" href="#" role="button">+</a> 
-              <a class="btn btn-default btn-minus" href="#" role="button">-</a>
-          </p>
-          <h4 class="lh-label"></h4>
-       </div>
-        <div class="col-md-4 p-color">
-          <h3>Color</h3>
-          <p>
-              <a class="btn btn-default btn-random" href="#" role="button">Random Color</a> 
-          </p>
-          <h4 class="color-label"></h4>
-        </div>
-      </div>
-    </div> -->
 
    
 
@@ -278,14 +229,13 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <!-- Bootstrap core js library -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- custom js file -->
+    <!-- Angular App file -->
+    <script src="js/main.js"></script>
+    <!-- custom js files -->
     <script src="js/functions.js"></script>
-
     <script src="js/fontSize.js"></script>
     <script src="js/letterSpacing.js"></script>
     <script src="js/lineHeight.js"></script>
     <script src="js/colors.js"></script>
-
-    <script src="js/main.js"></script>
   </body>
 </html>
