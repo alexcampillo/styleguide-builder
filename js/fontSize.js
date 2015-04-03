@@ -1,5 +1,7 @@
 // INCREASE / DECREASE FONT SIZE FUNCTIONS
 
+// GET INITIAL FONT SIZE
+
 	function font_size_counter(x) {
 		var fsc = $('.' + x + '-targeted').css('font-size').toString().slice(0, -2);
 		var int_convert = parseInt(fsc, 10);
@@ -14,6 +16,8 @@
 	console.log(paragraph_font_size_counter);
 	console.log(heading_font_size_counter);
 	console.log(subheading_font_size_counter);
+
+// ADD FONT SIZE TO LABEL IN UI
 
 	// function font_size_label(x) {
 	// 	var fs_label = $('.' + x + '-fs-label').text(font_size_counter(x) + "px");
@@ -33,6 +37,8 @@
 	console.log (paragraph_font_size_label);
 	console.log(heading_font_size_label);
 	console.log(subheading_font_size_label);
+
+// FONT SIZE TOGGLE FUNCTIONS
 
     function toggle_font_size(x, counter) {
 
@@ -66,12 +72,14 @@
 		toggle_font_size(element);
   	}
 
+
   	// PARAGRAPH FONT SIZE
 
   	function change_paragraph_font_size() {
-  		
+  		font_size('p');
   	}
 
+  	change_paragraph_font_size();
 
 
 

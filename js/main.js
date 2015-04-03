@@ -57,7 +57,7 @@ $(document).ready(function() {
 
 
   //Add Labels
-  $('.fs-label').text(fs_counter + "px");
+  // $('.fs-label').text(fs_counter + "px");
   // $('.lh-label').text(lh_counter + 'px');
   // $('.ls-label').text(ls_counter + 'px');
   // $('.color-label').text(hex_color);
