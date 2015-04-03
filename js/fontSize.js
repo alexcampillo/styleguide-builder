@@ -56,7 +56,7 @@ var p_font_size_counter, h_font_size_counter, sh_font_size_counter, p_font_size_
     		fs_counter = sh_font_size_counter
     	}
 
-    	console.log("font size is " + fs_counter)
+    	console.log(x + " font size is " + fs_counter)
 		increase_font_size = $('.' + x + '-font-size .btn-plus')
 		decrease_font_size = $('.' + x + '-font-size .btn-minus')
 
