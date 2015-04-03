@@ -1,5 +1,5 @@
 // INCREASE / DECREASE FONT SIZE FUNCTIONS
-var paragraph_font_size_counter, heading_font_size_counter, subheading_font_size_counter, paragraph_font_size_label, heading_font_size_label, subheading_font_size_label;
+var p_font_size_counter, h_font_size_counter, sh_font_size_counter, p_font_size_label, h_font_size_label, sh_font_size_label;
 
 // GET INITIAL FONT SIZE
 
@@ -10,13 +10,13 @@ var paragraph_font_size_counter, heading_font_size_counter, subheading_font_size
 		return int_convert
 	}
 
-	paragraph_font_size_counter = font_size_counter('p');
-	heading_font_size_counter = font_size_counter('h');
-	subheading_font_size_counter = font_size_counter('sh');
+	p_font_size_counter = font_size_counter('p');
+	h_font_size_counter = font_size_counter('h');
+	sh_font_size_counter = font_size_counter('sh');
 
-	console.log(paragraph_font_size_counter);
-	console.log(heading_font_size_counter);
-	console.log(subheading_font_size_counter);
+	console.log(p_font_size_counter);
+	console.log(h_font_size_counter);
+	console.log(sh_font_size_counter);
 
 // ADD FONT SIZE TO LABEL IN UI
 
@@ -31,13 +31,13 @@ var paragraph_font_size_counter, heading_font_size_counter, subheading_font_size
 		return fs_label;
 	}
 
-	paragraph_font_size_label = font_size_label('p');
-	heading_font_size_label = font_size_label('h');
-	subheading_font_size_label = font_size_label('sh');
+	p_font_size_label = font_size_label('p');
+	h_font_size_label = font_size_label('h');
+	sh_font_size_label = font_size_label('sh');
 
-	console.log (paragraph_font_size_label);
-	console.log(heading_font_size_label);
-	console.log(subheading_font_size_label);
+	console.log (p_font_size_label);
+	console.log(h_font_size_label);
+	console.log(sh_font_size_label);
 
 // FONT SIZE TOGGLE FUNCTIONS
 
@@ -46,7 +46,15 @@ var paragraph_font_size_counter, heading_font_size_counter, subheading_font_size
     	var fs_label = $('.' + x + '-fs-label')
 
     	var fsl = font_size_label(x);
-    	var fs_counter = paragraph_font_size_counter
+    	// var fs_counter;
+
+    	if(x == 'p') {
+    		return var fs_counter = p_font_size_counter
+    	} else if(x == 'h') {
+    		return var fs_counter = h_font_size_counter
+    	} else if(x == 'sh'){
+    		return var fs_counter = sh_font_size_counter
+    	}
 
     	console.log("font size is " + fs_counter)
 		increase_font_size = $('.' + x + '-font-size .btn-plus')
@@ -73,13 +81,23 @@ var paragraph_font_size_counter, heading_font_size_counter, subheading_font_size
   	}
 
 
-  	// PARAGRAPH FONT SIZE
+  	// CHANGE FONT SIZE
 
   	function change_paragraph_font_size() {
   		font_size('p');
   	}
 
+  	function change_heading_font_size() {
+  		font_size('h');
+  	}
+
+  	function change_subheading_font_size() {
+  		font_size('sh');
+  	}
+
   	change_paragraph_font_size();
+  	change_subheading_font_size();
+  	change_heading_font_size();
 
 
 
