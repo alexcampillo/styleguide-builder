@@ -1,4 +1,5 @@
 // INCREASE / DECREASE FONT SIZE FUNCTIONS
+var paragraph_font_size_counter, heading_font_size_counter, subheading_font_size_counter, paragraph_font_size_label, heading_font_size_label, subheading_font_size_label;
 
 // GET INITIAL FONT SIZE
 
@@ -9,9 +10,9 @@
 		return int_convert
 	}
 
-	var paragraph_font_size_counter = font_size_counter('p');
-	var heading_font_size_counter = font_size_counter('h');
-	var subheading_font_size_counter = font_size_counter('sh');
+	paragraph_font_size_counter = font_size_counter('p');
+	heading_font_size_counter = font_size_counter('h');
+	subheading_font_size_counter = font_size_counter('sh');
 
 	console.log(paragraph_font_size_counter);
 	console.log(heading_font_size_counter);
@@ -30,9 +31,9 @@
 		return fs_label;
 	}
 
-	var paragraph_font_size_label = font_size_label('p');
-	var heading_font_size_label = font_size_label('h');
-	var subheading_font_size_label = font_size_label('sh');
+	paragraph_font_size_label = font_size_label('p');
+	heading_font_size_label = font_size_label('h');
+	subheading_font_size_label = font_size_label('sh');
 
 	console.log (paragraph_font_size_label);
 	console.log(heading_font_size_label);
@@ -40,13 +41,12 @@
 
 // FONT SIZE TOGGLE FUNCTIONS
 
-    function toggle_font_size(x, counter) {
+    function toggle_font_size(x) {
 
     	var fs_label = $('.' + x + '-fs-label')
 
-    	var fs = counter
-    	var fsl = font_size_label(x)
-    	var fs_counter = fs
+    	var fsl = font_size_label(x);
+    	var fs_counter = paragraph_font_size_counter
 
     	console.log("font size is " + fs_counter)
 		increase_font_size = $('.' + x + '-font-size .btn-plus')
