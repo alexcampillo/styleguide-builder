@@ -192,8 +192,15 @@
 
 <section class="container" ng-controller="FontCtrl">
   <section class="row col-md-12">
-    <div ng-repeat="font in getFonts.items">
-      <p>{{font.family}}</p>
+
+<!--     <div ng-repeat="font in getFonts.items">
+      <p>{{font.family}}</p> -->
+      <input type="text" ng-model="searchText">
+      <table>
+      <tr ng-repeat="font in getFonts.items | filter:searchText">
+        <td>{{font.family}}</td>
+      </tr>
+    </table>
     </div>
   </section>
 </section>
