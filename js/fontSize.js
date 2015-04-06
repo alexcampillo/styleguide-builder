@@ -83,6 +83,14 @@ var p_font_size_counter, h_font_size_counter, sh_font_size_counter, p_font_size_
 
   	// CHANGE FONT SIZE
 
+  	function execute_fonts(){
+  		p_font_size_label
+		h_font_size_label
+		sh_font_size_label
+  	}
+
+  	execute_fonts();
+
   	function change_paragraph_font_size() {
   		font_size('p');
   	}

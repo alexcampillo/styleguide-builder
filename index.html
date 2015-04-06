@@ -42,6 +42,12 @@
           </button>
           <a class="navbar-brand" href="#">Styleguide</a>
         </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav pull-right">
+            <li><a href="#">Posts</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -190,7 +196,7 @@
   </div>
 </div>
 
-<section class="container" ng-controller="FontCtrl">
+<section class="container" ng-controller="FontsCtrl">
   <section class="row col-md-12">
 
 <!--     <div ng-repeat="font in getFonts.items">
@@ -216,6 +222,9 @@
       <div class="container">
       <div class="row">
         <div class="col-md-9">
+          <a type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+          <span class="glyphicon glyphicon-pencil"></span>
+          </a>
           <h1 class="h-targeted" contenteditable="true">Main Heading</h1>
           <h2 class="sh-targeted" contenteditable="true">Subheading</h2>
           <p class="p-targeted" contenteditable="true">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
@@ -226,7 +235,7 @@
       <hr>
     <div class="container">
       <footer class="row col-md-12">
-        <p>&copy; Company 2014</p>
+        <p>&copy; Company 2015</p>
       </footer>
     </div> <!-- /container -->
 
@@ -236,6 +245,12 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <!-- Bootstrap core js library -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- Initialize tooltip -->
+    <script type="text/javascript">
+      $(function () {
+        $('[data-toggle="popover"]').popover()
+      });
+    </script>
     <!-- Angular App file -->
     <script src="js/main.js"></script>
     <!-- custom js files -->
